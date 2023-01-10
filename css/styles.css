@@ -1,8 +1,14 @@
 body{
-    background-color: lightblue;
+    font-family: 'Roboto', sans-serif;
+    background-color: #EEF9BF;
 }
 
-h1{
+.titulo{  
+    width: 100%;                              
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66px;
+    color: #75B79E;
     text-align: center;
-    font-size: 40px;
+    margin-top: 40px;
 }
