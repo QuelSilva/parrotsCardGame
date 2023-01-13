@@ -17,14 +17,14 @@ body{
 .conteiner{
     display: flex;
     justify-content: center;
-    max-width: 900px;
+    max-width: 1110px;
     width: 100%;
     flex-wrap: wrap;
     gap: 34px;
     margin: auto;
 }
 
-.cartas{
+.carta{
     width: 117px;
     height: 146px;
     background-color: #a7e9af;
@@ -61,16 +61,17 @@ body{
     height: 100px;
   }
   
+
   /*efeito rotação*/
   .verso {
     transform: rotateY(180deg);
   }
   
-  .carta .click .verso {
+  .carta.click .verso {
     transform: rotateY(0deg);
   }
   
   /*desvira a carta*/
-  .carta .click .frente {
+  .carta.click .frente {
     transform: rotateY(-180deg);
   }
