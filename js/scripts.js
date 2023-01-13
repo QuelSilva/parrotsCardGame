@@ -1,5 +1,4 @@
 let quantidadeDeCartas;
-
 //contador de jogadas
 let contador = 0;
 
@@ -24,7 +23,7 @@ function distribuirCartas() {
 
   const cartas = [];
   let conteiner = document.querySelector(".conteiner");
-  //loop que vai repetir a quantidade de cartas
+  //Loop que vai repetir a quantidade de cartas;
   quantidadeDeCartas = 0;
   while (
     quantidadeDeCartas < 4 ||
@@ -46,10 +45,10 @@ function distribuirCartas() {
     </div>`);
   }
   cartas.sort(comparadorDeCartas);
-  //comparar se as cartas são ou não, iguais
+  //Comparar se as cartas são ou não, iguais;
   function comparadorDeCartas() {
     console.log(comparadorDeCartas);
-    //Math.random; Retorna um número pseudo-aleatório entre 0 e 1.
+    //Math.random; Retorna um número pseudo-aleatório entre 0 e 1;
     return Math.random() - 0.5;
   }
   for (let i = 0; i < quantidadeDeCartas; i++) {
@@ -59,7 +58,7 @@ function distribuirCartas() {
 
 let primeiroClick, segundoClick;
 
-//função que faz com que a cartas virem
+//Função que faz com que a cartas virem;
 
 function virarCartas(virar) {
   contador++;
@@ -71,7 +70,22 @@ function virarCartas(virar) {
     segundoClick = virar;
 
     virar.classList.add("click");
+    setTimeout(desvirarCartas, 1000);
   }
 }
-//imprime a função que add as cartas
+
+//Função que faz com que as cartas desvirem;
+function desvirarCartas() {
+  let carta1 = primeiroClick.classList.value;
+  let carta2 = segundoClick.classList.value;
+
+  if (carta1 !== carta2) {
+    primeiroClick.classList.remove("click");
+    segundoClick.classList.remove("click");
+  } 
+  primeiroClick = undefined;
+  segundoClick = undefined;
+}
+
+//Imprime a função que distribue as cartas;
 distribuirCartas();
