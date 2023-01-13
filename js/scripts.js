@@ -83,9 +83,25 @@ function desvirarCartas() {
     primeiroClick.classList.remove("click");
     segundoClick.classList.remove("click");
   } 
+  else{
+    setTimeout(fimDeJogo, 1000);
+  }
   primeiroClick = undefined;
   segundoClick = undefined;
+
 }
+
+//Alert fim de jogo;
+function fimDeJogo(){
+  console.log(fimDeJogo.length);
+  console.log(quantidadeDeCartas);
+  let jogoFinalizado = document.querySelectorAll(".click");
+
+  if(jogoFinalizado.length == quantidadeDeCartas){
+    alert(`Parabéns! Você finalizou o jogo com ${contador} jogadas.`);
+  }
+}
+
 
 //Imprime a função que distribue as cartas;
 distribuirCartas();
