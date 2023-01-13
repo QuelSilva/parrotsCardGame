@@ -75,3 +75,20 @@ body{
   .carta.click .frente {
     transform: rotateY(-180deg);
   }
+
+
+  /*Responsividade mobile*/
+
+  @media (max-width: 365px){
+    .conteiner{
+      width: 100%;
+      margin: auto;
+    }
+
+    .titulo{
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 42px;
+      text-align: center;
+    }
+  }
