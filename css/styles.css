@@ -66,11 +66,11 @@ body{
     transform: rotateY(180deg);
   }
   
-  .carta.click .verso {
+  .carta .click .verso {
     transform: rotateY(0deg);
   }
   
   /*desvira a carta*/
-  .carta.click .frente {
+  .carta .click .frente {
     transform: rotateY(-180deg);
   }
